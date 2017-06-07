@@ -36,7 +36,7 @@ gulp.task("data-wards", (cb) => {
     } else {
       json.features = json.features.filter((feature) => {
         var cityCode = feature.properties.N03_007;
-        return cityCode && cityCode.indexOf('072') === 0;
+        return cityCode && cityCode.indexOf('07203') === 0;
       });
       fs.writeFileSync( 'data/wards.geojson', JSON.stringify(json) );
     }
@@ -52,7 +52,7 @@ gulp.task("data-middleSchool", (cb) => {
     } else {
       json.features = json.features.filter((feature) => {
         var cityCode = feature.properties.A32_001;
-        return cityCode && cityCode.indexOf('072') === 0;
+        return cityCode && cityCode.indexOf('07203') === 0;
       });
       fs.writeFileSync( 'data/MiddleSchool.geojson', JSON.stringify(json) );
     }
@@ -68,7 +68,7 @@ gulp.task("data-elementary", (cb) => {
     } else {
       json.features = json.features.filter((feature) => {
         var cityCode = feature.properties.A27_005;
-        return cityCode && cityCode.indexOf('072') === 0;
+        return cityCode && cityCode.indexOf('07203') === 0;
       });
       fs.writeFileSync( 'data/Elementary.geojson', JSON.stringify(json) );
     }
@@ -85,7 +85,7 @@ gulp.task("data-school", (cb) => {
       var features = json.features.filter((feature) => {
         var cityCode = feature.properties.P29_001;
         feature.properties.label = feature.properties.P29_005.replace(/学校$/, '');
-        return cityCode && cityCode.indexOf('072') === 0;
+        return cityCode && cityCode.indexOf('07203') === 0;
       });
       // 小学校
       json.features = features.filter((feature) => {
