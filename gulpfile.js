@@ -36,7 +36,7 @@ gulp.task("data-wards", (cb) => {
     } else {
       json.features = json.features.filter((feature) => {
         var cityCode = feature.properties.N03_007;
-        return cityCode && cityCode.indexOf('121') === 0;
+        return cityCode && cityCode.indexOf('072') === 0;
       });
       fs.writeFileSync( 'data/wards.geojson', JSON.stringify(json) );
     }
