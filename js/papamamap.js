@@ -355,7 +355,7 @@ Papamamap.prototype.getPopupContent = function(feature)
     var memo = feature.get('備考') ? feature.get('備考') : feature.get('Memo');
     if (memo != null) {
         content += '<tr>';
-        content += '<th></th>';
+        content += '<th>延長保育</th>';
         content += '<td>' + memo + '</td>';
         content += '</tr>';
     }

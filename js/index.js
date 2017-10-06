@@ -111,10 +111,6 @@ $('#mainPage').on('pageshow', function() {
 	mtl = new MoveToList();
 	mtl.loadStationJson().then(function() {
 		mtl.appendToMoveToListBox(moveToList);
-	}, function(){
-		mtl.loadStationJson().then(function() {
-			mtl.appendToMoveToListBox(moveToList);
-		});
 	});
 
 	// 保育施設クリック時の挙動を定義
