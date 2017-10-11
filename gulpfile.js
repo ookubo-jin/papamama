@@ -46,7 +46,7 @@ gulp.task("data-wards", (cb) => {
 
 // 中学校区域のデータ更新
 gulp.task("data-middleSchool", (cb) => {
-  shapefile.read('data_org/A32-13_07.shp', {encoding: 'shift_jis'}, (err, json) => {
+  shapefile.read('data_org/A32-16_07.shp', {encoding: 'shift_jis'}, (err, json) => {
     if(err) {
       console.log(err);
     } else {
@@ -62,7 +62,7 @@ gulp.task("data-middleSchool", (cb) => {
 
 // 小学校区域のデータ更新
 gulp.task("data-elementary", (cb) => {
-  shapefile.read('data_org/A27-10_07-g_SchoolDistrict.shp', {encoding: 'shift_jis'}, (err, json) => {
+  shapefile.read('data_org/A27-16_07.shp', {encoding: 'shift_jis'}, (err, json) => {
     if(err) {
       console.log(err);
     } else {
@@ -104,7 +104,7 @@ gulp.task("data-school", (cb) => {
 
 // 駅のデータ更新
 gulp.task("data-station", (cb) => {
-  shapefile.read('data_org/N02-15_Station.shp', {encoding: 'shift_jis'}, (err, json) => {
+  shapefile.read('data_org/N02-16_Station.shp', {encoding: 'shift_jis'}, (err, json) => {
     if(err) {
       console.log(err);
     } else {
@@ -180,7 +180,7 @@ gulp.task("data-nursery-bk", (cb) => {
   });
 });
 
-// 保育園等のデータ更新(千葉市保育所データCSV)
+// 保育園等のデータ更新(データCSV)
 gulp.task("data-nursery", (cb) => {
   var fileName = 'data_org/nurseryData.csv';
   fs.createReadStream(fileName)
