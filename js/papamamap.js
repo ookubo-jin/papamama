@@ -395,7 +395,7 @@ Papamamap.prototype.getPopupContent = function(feature)
         content += '</tr>';
     }
     var vacancy = feature.get('Vacancy');
-    if(type == "認可保育所" && vacancy === 'Y') {
+    if((type == "認可保育所" || type == "認定保育所") && vacancy === 'Y') {
         content += '<tr>';
         content += '<th>欠員</th>';
         content += '<td>';
