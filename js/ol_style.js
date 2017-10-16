@@ -99,6 +99,7 @@ var nurseryStyleFunction = function(feature, resolution, featureStyle) {
 	resolution = Math.floor(resolution * 1000);
 	var _type = "";
 	var label = feature.get('ラベル') ? feature.get('ラベル') : feature.get('Label')
+	console.log(label);
 	var text = resolution < 10000 ? label : '';
 	var style = [];
 	style = [
