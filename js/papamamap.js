@@ -386,7 +386,7 @@ Papamamap.prototype.getPopupContent = function(feature)
 
     var type = feature.get('種別') ? feature.get('種別') : feature.get('Type');
     var proof = feature.get('証明') ? feature.get('証明') : feature.get('Proof');
-    if(type == "認可外" && proof === 'Y') {
+    if(type == "認可外保育所" && proof === 'Y') {
         content += '<tr>';
         content += '<th>監督基準</th>';
         content += '<td>';
