@@ -35,6 +35,7 @@ var ninkaStyleFunction = function(feature, resolution)
 		featureStyle = featureStyleList[facilityTypeName];
 		style        = nurseryStyleFunction(feature, resolution, featureStyle);
 	}
+	console.log("認可保育所:" + feature.get('Label'));
 	return style;
 };
 
@@ -52,6 +53,7 @@ var ninkagaiStyleFunction = function(feature, resolution)
 		featureStyle = featureStyleList[facilityTypeName];
 		style        = nurseryStyleFunction(feature, resolution, featureStyle);
 	}
+	console.log("認可外保育所:" + feature.get('Label'));
 	return style;
 };
 
@@ -69,6 +71,7 @@ var kindergartenStyleFunction = function(feature, resolution)
 		featureStyle = featureStyleList[facilityTypeName];
 		style        = nurseryStyleFunction(feature, resolution, featureStyle);
 	}
+	console.log("幼稚園:" + feature.get('Label'));
 	return style;
 };
 
@@ -99,7 +102,7 @@ var nurseryStyleFunction = function(feature, resolution, featureStyle) {
 	resolution = Math.floor(resolution * 1000);
 	var _type = "";
 	var label = feature.get('ラベル') ? feature.get('ラベル') : feature.get('Label')
-	console.log(label);
+	//console.log(label);
 	var text = resolution < 10000 ? label : '';
 	var style = [];
 	style = [
