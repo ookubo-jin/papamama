@@ -22,7 +22,13 @@ FacilityFilter.prototype.getFilteredFeaturesGeoJson = function (conditions, nurs
     var ninkaFeatures = [];
     _features = nurseryFacilities.features.filter(function (item,idx) {
             var type = item.properties['種別'] ? item.properties['種別'] : item.properties['Type'];
-            if(type == "認可保育所" || type == "認定保育所") return true;
+            if(type == "認可保育所" || 
+               type == "認定保育所" || 
+               type === "認可保育所（分園）" || 
+               type === "小規模保育事業Ａ型" || 
+               type === "事業所内保育事業（定員20人以上）" || 
+               type === "幼保連携型認定こども園" || 
+               type === "認定こども園") return true;
         });
     Array.prototype.push.apply(ninkaFeatures, _features);
 

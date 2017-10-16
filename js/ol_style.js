@@ -7,7 +7,12 @@ var featureStyleList = {
 	'認可外保育所': { color: '#0362A0', img: 'image/019.png'},
 	'幼稚園': { color: '#FF5C24', img: 'image/029.png'},
 	'認可保育所': { color: '#6EE100', img: 'image/018.png'},
-	'認定保育所': { color: '#6EE100', img: 'image/018.png'}
+	'認定保育所': { color: '#6EE100', img: 'image/018.png'},
+	'認可保育所（分園）': { color: '#6EE100', img: 'image/018.png'},
+	'小規模保育事業Ａ型': { color: '#6EE100', img: 'image/018.png'},
+	'事業所内保育事業（定員20人以上）': { color: '#6EE100', img: 'image/018.png'},
+	'幼保連携型認定こども園': { color: '#6EE100', img: 'image/018.png'},
+	'認定こども園': { color: '#6EE100', img: 'image/018.png'}
 };
 
 /**
@@ -20,7 +25,13 @@ var ninkaStyleFunction = function(feature, resolution)
 {
 	var facilityTypeName = feature.get('種別') ? feature.get('種別') : feature.get('Type');
 	var style = [];
-	if(facilityTypeName === "認可保育所" || facilityTypeName === "認定保育所") {
+	if(facilityTypeName === "認可保育所" || 
+	   facilityTypeName === "認定保育所" || 
+	   facilityTypeName === "認可保育所（分園）" || 
+	   facilityTypeName === "小規模保育事業Ａ型" || 
+	   facilityTypeName === "事業所内保育事業（定員20人以上）" || 
+	   facilityTypeName === "幼保連携型認定こども園" || 
+	   facilityTypeName === "認定こども園") {
 		featureStyle = featureStyleList[facilityTypeName];
 		style        = nurseryStyleFunction(feature, resolution, featureStyle);
 	}

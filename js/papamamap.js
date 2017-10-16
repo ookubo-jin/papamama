@@ -395,7 +395,13 @@ Papamamap.prototype.getPopupContent = function(feature)
         content += '</tr>';
     }
     var vacancy = feature.get('Vacancy');
-    if((type == "認可保育所" || type == "認定保育所") && vacancy === 'Y') {
+    if((type == "認可保育所" || 
+        type == "認定保育所" || 
+        type === "認可保育所（分園）" || 
+        type === "小規模保育事業Ａ型" || 
+        type === "事業所内保育事業（定員20人以上）" || 
+        type === "幼保連携型認定こども園" || 
+        type === "認定こども園") && vacancy === 'Y') {
         content += '<tr>';
         content += '<th>欠員</th>';
         content += '<td>';
