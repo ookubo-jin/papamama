@@ -390,7 +390,7 @@ Papamamap.prototype.getPopupContent = function(feature)
         content += '<tr>';
         content += '<th>監督基準</th>';
         content += '<td>';
-        content += '証明書発行済<a href="https://www.city.chiba.jp/kodomomirai/kodomomirai/unei/ninkagai.html" target="_blank">(詳細)</a>';
+        content += '証明書発行済<a href="https://www.city.koriyama.fukushima.jp/223000/kosodate/ninkagai/index.html" target="_blank">(詳細)</a>';
         content += '</td>';
         content += '</tr>';
     }
@@ -399,7 +399,7 @@ Papamamap.prototype.getPopupContent = function(feature)
         content += '<tr>';
         content += '<th>欠員</th>';
         content += '<td>';
-        content += '<a href="http://www.city.chiba.jp/kodomomirai/kodomomirai/unei/akizyoukyou.html" target="_blank">空きあり</a>';
+        content += '<a href="https://www.city.koriyama.fukushima.jp/223000/kosodate/ninka/index.html" target="_blank">空きあり</a>';
         var vacancyDate = feature.get('VacancyDate');
         if (vacancyDate != null) {
             content += " (" + vacancyDate + ")";
